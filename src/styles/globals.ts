@@ -1,14 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Roboto'), url(/fonts/roboto.woff2) format('woff2');
-  }
-
   * {
     padding: 0;
     margin: 0;
@@ -16,7 +8,7 @@ export default createGlobalStyle`
     list-style: none;
     text-decoration: none;
     overflow-x: hidden;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
   }
 
   ::-webkit-scrollbar {
