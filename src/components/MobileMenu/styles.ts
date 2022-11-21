@@ -42,6 +42,7 @@ export const ListContainer = styled.div<IList>`
   display: none;
   align-items: center;
   justify-content: center;
+  z-index: 998;
   transition: all .5s ease;
 
   @media (max-width: 520px) {
