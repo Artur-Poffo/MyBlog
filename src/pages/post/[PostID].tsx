@@ -4,8 +4,6 @@ import { GetStaticPaths, GetStaticProps } from "next"
 import Title from "../../components/Title"
 import { Container, Header, Content, PostText } from "../../styles/pages/Post"
 
-type Tech = string
-
 const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Container>
@@ -14,7 +12,7 @@ const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticPro
       <Content>
         <Title text={content.title} />
         <ul>
-          {content.techs.map((tech: Tech) => {
+          {content.techs.map((tech: string) => {
             return (
               <li key={tech} >{tech}</li>
             )
@@ -35,9 +33,31 @@ interface IParams extends ParsedUrlQuery {
   PropsID: string
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
+interface PostOBJ {
+  _id: string
+  title: string
+  desc: string
+  thumb: string
+  backdrop_path: string
+  post_content: string
+  techs: Array<string>
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const res = await fetch("http://localhost:3000/api/trending")
+  const data = await res.json()
+  const PostArray = data.data
+
+  const paths = PostArray.map((path: PostOBJ) => {
+    return {
+      params: {
+        PostID: path._id
+      }
+    }
+  })
+
   return {
-    paths: [],
+    paths,
     fallback: "blocking"
   }
 }
