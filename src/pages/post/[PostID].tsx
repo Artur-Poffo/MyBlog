@@ -33,31 +33,9 @@ interface IParams extends ParsedUrlQuery {
   PropsID: string
 }
 
-interface PostOBJ {
-  _id: string
-  title: string
-  desc: string
-  thumb: string
-  backdrop_path: string
-  post_content: string
-  techs: Array<string>
-}
-
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/trending")
-  const data = await res.json()
-  const PostArray = data.data
-
-  const paths = PostArray.map((path: PostOBJ) => {
-    return {
-      params: {
-        PostID: path._id
-      }
-    }
-  })
-
   return {
-    paths,
+    paths: [],
     fallback: "blocking"
   }
 }
