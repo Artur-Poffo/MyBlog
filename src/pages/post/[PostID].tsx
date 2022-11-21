@@ -3,9 +3,8 @@ import { InferGetStaticPropsType } from 'next'
 import { GetStaticPaths, GetStaticProps } from "next"
 import Title from "../../components/Title"
 import { Container, Header, Content, PostText } from "../../styles/pages/Post"
-import { type } from 'os'
 
-type Thech = string
+type Tech = string
 
 const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -15,7 +14,7 @@ const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticPro
       <Content>
         <Title text={content.title} />
         <ul>
-          {content.techs.map((tech: Thech) => {
+          {content.techs.map((tech: Tech) => {
             return (
               <li key={tech} >{tech}</li>
             )
