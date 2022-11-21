@@ -13,32 +13,22 @@ interface PostObj {
   thumb: string
 }
 
-export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home() {
   return (
     <>
-      <Title text="Posts Recentes:" />
-
-      <Container>
-        <FlexWrap>
-          {posts.map((post: PostObj) => {
-            return (
-              <Post key={post._id} title={post.title} desc={post.desc} thumb={post.thumb} link={`/post/${post._id}`} />
-            )
-          })}
-        </FlexWrap>
-      </Container>
+      <h1>a</h1>
     </>
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/trending")
-  const result = await res.json()
+// export const getStaticProps: GetStaticProps = async () => {
+//   const res = await fetch("http://localhost:3000/api/trending")
+//   const result = await res.json()
 
-  return {
-    props: {
-      posts: result.data,
-    },
-    revalidate: 3600 // One Hour
-  }
-}
+//   return {
+//     props: {
+//       posts: result.data,
+//     },
+//     revalidate: 3600 // One Hour
+//   }
+// }

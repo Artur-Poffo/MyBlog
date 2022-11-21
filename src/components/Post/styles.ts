@@ -28,7 +28,7 @@ export const Thumb = styled.div<Props>`
 `
 
 export const Content = styled.div`
-  padding: 20px 40px;
+  padding: 40px 30px;
 
    h2, p {
     letter-spacing: .7px;
@@ -37,7 +37,7 @@ export const Content = styled.div`
   }
 
   p {
-    margin: 10px 0 20px 0;
+    margin: 10px 0;
     color: var(--text);
   }
 `

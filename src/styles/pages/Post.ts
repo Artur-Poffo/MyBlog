@@ -16,6 +16,7 @@ export const Header = styled.div<IBg>`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 `
 
 export const Content = styled.div`

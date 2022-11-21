@@ -4,75 +4,56 @@ import { GetStaticPaths, GetStaticProps } from "next"
 import Title from "../../components/Title"
 import { Container, Header, Content, PostText } from "../../styles/pages/Post"
 
-const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Post: React.FC = () => {
   return (
-    <Container>
-      <Header image={content.backdrop_path} />
-
-      <Content>
-        <Title text={content.title} />
-        <ul>
-          {content.techs.map((tech: string) => {
-            return (
-              <li key={tech} >{tech}</li>
-            )
-          })}
-        </ul>
-
-        <PostText>
-          <p>
-            {content.post_content}
-          </p>
-        </PostText>
-      </Content>
-    </Container>
+    <h1>b</h1>
   )
 }
 
-interface IParams extends ParsedUrlQuery {
-  PropsID: string
-}
+// interface IParams extends ParsedUrlQuery {
+//   PropsID: string
+// }
 
-interface PostOBJ {
-  _id: string
-  title: string
-  desc: string
-  thumb: string
-  backdrop_path: string
-  post_content: string
-  techs: Array<string>
-}
+// interface PostOBJ {
+//   _id: string
+//   title: string
+//   desc: string
+//   thumb: string
+//   backdrop_path: string
+//   post_content: string
+//   techs: Array<string>
+// }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/trending")
-  const data = await res.json()
-  const PostArray = data.data
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const res = await fetch("http://localhost:3000/api/trending")
+//   const data = await res.json()
+//   const PostArray = data.data
 
-  const paths = PostArray.map((path: PostOBJ) => {
-    return {
-      params: {
-        PostID: path._id
-      }
-    }
-  })
+//   const paths = PostArray.map((path: PostOBJ) => {
+//     return {
+//       params: {
+//         PostID: path._id
+//       }
+//     }
+//   })
 
-  return {
-    paths,
-    fallback: "blocking"
-  }
-}
+//   return {
+//     paths,
+//     fallback: "blocking"
+//   }
+// }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { PostID } = context.params as IParams
-  const res = await fetch(`http://localhost:3000/api/post/${PostID}`)
-  const data = await res.json()
+// export const getStaticProps: GetStaticProps = async (context) => {
+//   const { PostID } = context.params as IParams
+//   const res = await fetch(`http://localhost:3000/api/post/${PostID}`)
+//   const data = await res.json()
 
-  return {
-    props: {
-      content: data.data
-    },
-    revalidate: 3600 // One Hour
-  }
-}
+//   return {
+//     props: {
+//       content: data.data
+//     },
+//     revalidate: 3600 // One Hour
+//   }
+// }
 
 export default Post
