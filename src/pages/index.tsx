@@ -11,6 +11,9 @@ interface PostObj {
   title: string
   desc: string
   thumb: string
+  backdrop_path: string
+  post_content: string
+  techs?: Array<string>
 }
 
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {

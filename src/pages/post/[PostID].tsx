@@ -29,15 +29,15 @@ const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticPro
   )
 }
 
-interface IParams extends ParsedUrlQuery {
-  PropsID: string
-}
-
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
     fallback: "blocking"
   }
+}
+
+interface IParams extends ParsedUrlQuery {
+  PropsID: string
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {

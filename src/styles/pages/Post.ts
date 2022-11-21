@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Header = styled.div<IBg>`
   width: 100%;
-  height: 55vh;
+  height: 70vh;
   background-image: url(${props => props.image});
   background-repeat: no-repeat;
   background-position: center;
@@ -38,7 +38,7 @@ export const Content = styled.div`
 `
 
 export const PostText = styled.div`
-  padding: 0 20px;
+  padding: 0 10px;
   max-width: 960px;
 
   p {
