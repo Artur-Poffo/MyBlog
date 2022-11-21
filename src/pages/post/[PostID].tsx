@@ -64,8 +64,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { PostID } = context.params as IParams
-
-  const res = await fetch(`https://my-blog-project-eight.vercel.app/api/post/${PostID}` || `http://localhost:3000/api/post/${PostID}`)
+  const res = await fetch(`http://localhost:3000/api/post/${PostID}`)
   const data = await res.json()
 
   return {
