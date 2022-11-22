@@ -47,6 +47,5 @@ export const PostText = styled.div`
     line-height: 1.6;
     font-size: 1.25rem;
     margin-bottom: 30px;
-    opacity: .7;
   }
 `
