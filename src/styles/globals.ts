@@ -46,10 +46,7 @@ export default createGlobalStyle`
   --background: #111111;
   --primary: #996DFF;
   --secondary: #b6b7f6;
-  --gradient: linear-gradient(225deg, var(--secondary) 0%, var(--primary) 100%);
-  --text: ##B4B4B4;
-  --textLight: #FFFF;
-  --textDark: #333333;
-  --border: #0000;
+  --text: #B4B4B4;
+  --textLight: #EEEE;
 }
 `

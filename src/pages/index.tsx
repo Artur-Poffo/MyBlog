@@ -2,7 +2,7 @@ import { InferGetStaticPropsType } from 'next'
 import { GetStaticProps } from "next"
 import { Container } from "../styles/pages/Home"
 
-import Title from "../components/Title"
+import Intro from '../components/Intro'
 import FlexWrap from "../components/FlexWrap"
 import Post from "../components/Post"
 
@@ -19,7 +19,7 @@ interface PostObj {
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Title text="Posts Recentes:" />
+      <Intro />
 
       <Container>
         <FlexWrap>

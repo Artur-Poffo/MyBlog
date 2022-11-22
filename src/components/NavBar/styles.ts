@@ -18,7 +18,6 @@ export const Links = styled.ul`
   gap: 20px;
 
   li {
-    opacity: .7;
     text-transform: capitalize;
     letter-spacing: 3px;
     color: var(--text);
@@ -26,7 +25,6 @@ export const Links = styled.ul`
     cursor: pointer;
 
     &:hover {
-      opacity: 1;
       color: var(--textLight);
     }
   }

@@ -56,14 +56,14 @@ export const List = styled.ul`
   gap: 15px;
 
   a {
-    opacity: .7;
+    color: var(--text);
     letter-spacing: 3px;
     text-transform: capitalize;
     cursor: pointer;
     transition: all .5s ease;
 
     &:hover {
-      opacity: 1;
+      color: var(--textLight);
     }
   }
 `
