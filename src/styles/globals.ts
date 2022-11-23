@@ -8,7 +8,7 @@ export default createGlobalStyle`
     list-style: none;
     text-decoration: none;
     overflow-x: hidden;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 
   ::-webkit-scrollbar {
