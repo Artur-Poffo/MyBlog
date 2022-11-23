@@ -35,7 +35,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://my-blog-tech.vercel.app/api/listPosts")
+  const res = await fetch("https://my-blog-tech.vercel.app/api/posts")
   const result = await res.json()
 
   return {
