@@ -1,4 +1,4 @@
-# My Blog:
+# MyBlog:
 
 > Status: Em Desenvolvimento...
 

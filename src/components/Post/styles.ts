@@ -9,13 +9,13 @@ export const Container = styled.a`
   width: 320px;
   background-color: var(--background);
   border-radius: 10px;
-  box-shadow: 0px 3px 10px black;
+  box-shadow: 0px 3px 10px #000;
   cursor: pointer;
   transition: all .4s ease;
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 13px 15px black;
+    box-shadow: 0px 13px 15px #000;
   }
 `;
 

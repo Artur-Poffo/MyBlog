@@ -38,7 +38,7 @@ export const Content = styled.div`
 `
 
 export const PostText = styled.div`
-  padding: 0 10px;
+  padding: 0 15px;
   max-width: 960px;
 
   p {

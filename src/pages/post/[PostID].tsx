@@ -1,7 +1,9 @@
 import { ParsedUrlQuery } from 'querystring'
 import { InferGetStaticPropsType } from 'next'
 import { GetStaticPaths, GetStaticProps } from "next"
+
 import Title from "../../components/Title"
+import AuthorPost from '../../components/AuthorPost'
 import { Container, Header, Content, PostText } from "../../styles/pages/Post"
 
 const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -24,6 +26,8 @@ const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticPro
             {content.post_content}
           </p>
         </PostText>
+
+        <AuthorPost />
       </Content>
     </Container>
   )
