@@ -63,7 +63,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       posts: data.data,
       tag: nameTag
     },
-    revalidate: 3600 // One Hour
+    revalidate: 500 // Seconds
   }
 }
 
