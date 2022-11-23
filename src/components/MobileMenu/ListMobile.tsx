@@ -9,14 +9,14 @@ type link = {
 interface Props {
   setShow: Function
   show: boolean
-  items: Array<link>
+  links: Array<link>
 }
 
-const ListMobile: React.FC<Props> = ({ show, items, setShow }) => {
+const ListMobile: React.FC<Props> = ({ show, links, setShow }) => {
   return (
     <ListContainer show={show} >
       <List>
-        {items.map((item, index) => {
+        {links.map((item, index) => {
           return (
             <Link onClick={() => setShow(false)} key={index} href={item.to} >
               {item.name}

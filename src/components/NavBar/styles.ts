@@ -16,10 +16,22 @@ export const Nav = styled.nav`
 export const Links = styled.ul`
   display: flex;
   gap: 20px;
+  font-weight: 500;
 
-  li {
+  a:first-child {
+    margin-right: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--primary);
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+
+  a {
     text-transform: capitalize;
-    letter-spacing: 3px;
+    letter-spacing: .5px;
     color: var(--text);
     transition: all .3s ease;
     cursor: pointer;

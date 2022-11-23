@@ -53,14 +53,26 @@ export const ListContainer = styled.div<IList>`
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+  font-weight: 500;
+
+  a:first-child {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--primary);
+
+    &:hover {
+      color: var(--secondary);
+    }
+  }
 
   a {
-    color: var(--text);
-    letter-spacing: 3px;
     text-transform: capitalize;
+    letter-spacing: .5px;
+    color: var(--text);
+    transition: all .3s ease;
     cursor: pointer;
-    transition: all .5s ease;
 
     &:hover {
       color: var(--textLight);

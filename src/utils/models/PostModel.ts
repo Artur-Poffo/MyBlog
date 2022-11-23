@@ -8,6 +8,7 @@ interface IPosts {
   backdrop_path: string
   post_content: string
   techs?: Array<string>
+  tag: string
 }
 
 const PostSchema = new Schema<IPosts>({
@@ -16,7 +17,8 @@ const PostSchema = new Schema<IPosts>({
   thumb: { type: String, required: true },
   backdrop_path: { type: String, required: true },
   post_content: { type: String, required: true },
-  techs: { type: Array, required: false }
+  techs: { type: Array, required: false },
+  tag: { type: String, required: true }
 })
 
 const Post = models.posts || model<IPosts>('posts', PostSchema)

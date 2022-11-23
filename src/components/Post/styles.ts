@@ -14,7 +14,7 @@ export const Container = styled.a`
   transition: all .4s ease;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
 `;
 

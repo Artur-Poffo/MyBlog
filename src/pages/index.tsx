@@ -14,12 +14,13 @@ interface PostObj {
   backdrop_path: string
   post_content: string
   techs?: Array<string>
+  tag: string
 }
 
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Intro />
+      <Intro IntroTitle='MyBlog' IntroDesc='MyBlog é um projeto que criei usando Next.js e TypeScript, se trata de um blog de Tecnologia que vai me ajudar a memorizar conteúdo.Também usarei o MyBlog como um Hobby, escreverei posts sobre conteúdos que eu determinar interessantes de compartilhar.' />
 
       <Container>
         <FlexWrap>
@@ -35,7 +36,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://my-blog-tech.vercel.app/api/posts")
+  const res = await fetch("https://my-blog-tech.vercel.app/api/listPosts")
   const result = await res.json()
 
   return {

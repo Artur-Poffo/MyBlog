@@ -13,7 +13,7 @@ const MobileMenu: React.FC = () => {
         <div />
       </Btn>
 
-      <ListMobile setShow={setShow} show={show} items={[{ name: "Home", to: "/" }, { name: "Posts", to: "/posts" }, { name: "Contato", to: "/contact" }]} />
+      <ListMobile setShow={setShow} show={show} links={[{ name: "Blog", to: "/" }, { name: "Front-End", to: "/tag/Front-End" }, { name: "Back-End", to: "/tag/Back-End" }, { name: "Full-Stack", to: "/tag/Full-Stack" }, { name: "Mobile", to: "/tag/Mobile" },]} />
     </>
   )
 }
