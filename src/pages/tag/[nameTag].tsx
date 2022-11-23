@@ -54,7 +54,7 @@ interface IParams extends ParsedUrlQuery {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { nameTag } = context.params as IParams
-  const req = await fetch(`http://localhost:3000/api/tag/${nameTag}`)
+  const req = await fetch(`https://my-blog-tech.vercel.app/api/tag/${nameTag}}`)
   const data = await req.json()
 
   return {
