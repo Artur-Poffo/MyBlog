@@ -19,6 +19,9 @@ export const Links = styled.ul`
   font-weight: 500;
 
   a:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-right: 15px;
     text-transform: uppercase;
     font-weight: bolder;
@@ -26,6 +29,10 @@ export const Links = styled.ul`
 
     &:hover {
       color: var(--secondary);
+    }
+
+    ::after {
+      content: "|";
     }
   }
 
