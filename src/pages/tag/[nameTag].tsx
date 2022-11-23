@@ -18,42 +18,52 @@ interface PostObj {
   tag: string
 }
 
-const TagPage: React.FC = () => {
+const TagPage: React.FC = ({ posts, tag }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <h1>teste</h1>
+      <Intro IntroTitle={tag} />
+
+      <Container>
+        <FlexWrap>
+          {posts.map((post: PostObj) => {
+            return (
+              <Post key={post._id} title={post.title} desc={post.desc} thumb={post.thumb} link={`/post/${post._id}`} />
+            )
+          })}
+        </FlexWrap>
+      </Container>
     </>
   )
 }
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   return {
-//     paths: [
-//       { params: { nameTag: "Front-End" } },
-//       { params: { nameTag: "Back-End" } },
-//       { params: { nameTag: "Full-Stack" } },
-//       { params: { nameTag: "Mobile" } },
-//     ],
-//     fallback: false
-//   }
-// }
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [
+      { params: { nameTag: "Front-End" } },
+      { params: { nameTag: "Back-End" } },
+      { params: { nameTag: "Full-Stack" } },
+      { params: { nameTag: "Mobile" } },
+    ],
+    fallback: false
+  }
+}
 
-// interface IParams extends ParsedUrlQuery {
-//   PropsTag: string
-// }
+interface IParams extends ParsedUrlQuery {
+  PropsTag: string
+}
 
-// export const getStaticProps: GetStaticProps = async (context) => {
-//   const { nameTag } = context.params as IParams
-//   const req = await fetch(`http://localhost:3000/api/tag/${nameTag}`)
-//   const data = await req.json()
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { nameTag } = context.params as IParams
+  const req = await fetch(`http://localhost:3000/api/tag/${nameTag}`)
+  const data = await req.json()
 
-//   return {
-//     props: {
-//       posts: data.data,
-//       tag: nameTag
-//     },
-//     revalidate: 3600 // One Hour
-//   }
-// }
+  return {
+    props: {
+      posts: data.data,
+      tag: nameTag
+    },
+    revalidate: 3600 // One Hour
+  }
+}
 
 export default TagPage
