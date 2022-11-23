@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next"
 import { InferGetStaticPropsType } from 'next'
 import { ParsedUrlQuery } from 'querystring'
+
 import { Container } from "../../styles/pages/Tag"
 
 import Intro from "../../components/Intro"
@@ -54,7 +55,7 @@ interface IParams extends ParsedUrlQuery {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { nameTag } = context.params as IParams
-  const req = await fetch(`https://my-blog-tech.vercel.app/api/tag/${nameTag}}`)
+  const req = await fetch(`https://my-blog-tech.vercel.app/api/tag/${nameTag}`)
   const data = await req.json()
 
   return {
