@@ -1,5 +1,3 @@
-import { GetStaticProps } from "next"
-
 import { Container, PerfilImage } from "./styles"
 
 const AuthorPost: React.FC = () => {
@@ -13,12 +11,6 @@ const AuthorPost: React.FC = () => {
       </div>
     </Container>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-  }
 }
 
 export default AuthorPost
