@@ -28,7 +28,7 @@ const TagPage: React.FC = ({ posts, tag }: InferGetStaticPropsType<typeof getSta
         <FlexWrap>
           {posts.map((post: PostObj) => {
             return (
-              <Post key={post._id} title={post.title} desc={post.desc} thumb={post.thumb} link={`/post/${post._id}`} />
+              <Post key={post._id} title={post.title} desc={post.desc} thumb={post.thumb} tag={post.tag} link={`/post/${post._id}`} />
             )
           })}
         </FlexWrap>

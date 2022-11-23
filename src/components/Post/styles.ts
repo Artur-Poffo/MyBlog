@@ -15,6 +15,7 @@ export const Container = styled.a`
 
   &:hover {
     transform: translateY(-10px);
+    box-shadow: 0px 13px 15px black;
   }
 `;
 
@@ -39,5 +40,16 @@ export const Content = styled.div`
   p {
     margin: 10px 0;
     color: var(--text);
+  }
+
+  span {
+    display: inline-block;
+    margin-top: 10px;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    background-color: var(--primary);
+    color: var(--textLight);
+    border-radius: 50px;
   }
 `
