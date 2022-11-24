@@ -2,7 +2,6 @@
 import { ParsedUrlQuery } from 'querystring'
 import { InferGetStaticPropsType } from 'next'
 import { GetStaticPaths, GetStaticProps } from "next"
-import ReactMarkdown from 'react-markdown'
 
 import Title from "../../components/Title"
 import AuthorPost from '../../components/AuthorPost'
