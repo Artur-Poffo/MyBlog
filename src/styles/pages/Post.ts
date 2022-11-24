@@ -41,11 +41,19 @@ export const PostText = styled.div`
   padding: 0 15px;
   max-width: 960px;
 
-  p {
+  div {
+    h2 {
+      letter-spacing: .8px;
+      margin: 30px 0;
+    }
+
+    p {
     color: var(--text);
     letter-spacing: .5px;
     line-height: 1.6;
     font-size: 1.25rem;
     margin-bottom: 30px;
   }
+  }
+
 `

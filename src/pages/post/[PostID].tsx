@@ -23,9 +23,9 @@ const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticPro
         </ul>
 
         <PostText>
-          <p dangerouslySetInnerHTML={{ __html: content.post_content }} >
+          <div dangerouslySetInnerHTML={{ __html: content.post_content }} >
 
-          </p>
+          </div>
         </PostText>
 
         <AuthorPost />
