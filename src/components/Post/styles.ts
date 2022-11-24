@@ -29,22 +29,32 @@ export const Thumb = styled.div<Props>`
 `
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 40px 30px;
 
-   h2, p {
+   h2 {
+    color: var(--text);
+    font-size: 1.1rem;
+    text-transform: capitalize;
     letter-spacing: .7px;
-    color: var(--primary);
-    text-align: left;
   }
 
-  p {
-    margin: 10px 0;
-    color: var(--text);
+  ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    li {
+      text-transform: lowercase;
+      color: var(--secondary);
+    }
   }
 
   span {
-    display: inline-block;
     margin-top: 10px;
+    display: inline-block;
     width: 100px;
     text-align: center;
     padding: 5px;

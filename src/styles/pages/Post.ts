@@ -39,12 +39,12 @@ export const Content = styled.div`
 
 export const PostText = styled.div`
   padding: 0 15px;
+  margin-bottom: 120px;
   max-width: 960px;
 
   div {
     display: flex;
     flex-direction: column;
-    align-items: center;
     color: var(--text);
 
     h2 {
@@ -52,7 +52,6 @@ export const PostText = styled.div`
       text-transform: capitalize;
       letter-spacing: .8px;
       margin: 30px 0;
-      align-self: flex-start;
 
       @media (max-width: 520px) {
         font-size: 1.75rem;
@@ -63,7 +62,7 @@ export const PostText = styled.div`
       letter-spacing: .5px;
       line-height: 1.6;
       font-size: 1.25rem;
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
 
     a {

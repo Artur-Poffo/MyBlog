@@ -9,11 +9,10 @@ import Post from "../components/Post"
 interface PostObj {
   _id: string
   title: string
-  desc: string
   thumb: string
   backdrop_path: string
   post_content: string
-  techs?: Array<string>
+  techs: Array<string>
   tag: string
 }
 
@@ -26,7 +25,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <FlexWrap>
           {posts.map((post: PostObj) => {
             return (
-              <Post key={post._id} title={post.title} desc={post.desc} thumb={post.thumb} tag={post.tag} link={`/post/${post._id}`} />
+              <Post key={post._id} title={post.title} techs={post.techs} thumb={post.thumb} tag={post.tag} link={`/post/${post._id}`} />
             )
           })}
         </FlexWrap>

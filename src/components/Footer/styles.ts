@@ -15,6 +15,7 @@ export const Container = styled.footer`
     gap: 20px;
 
     a {
+      text-align: center;
       text-decoration: underline;
       transition: all .5s ease;
 

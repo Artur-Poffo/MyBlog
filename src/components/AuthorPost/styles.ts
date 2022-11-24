@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-  margin: 30px 0;
+  margin-bottom: 15px;
 
   div {
     display: flex;
@@ -44,9 +44,4 @@ export const PerfilImage = styled.div<IPerfilImage>`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  @media (max-width: 520px) {
-    width: 120px;
-    height: 120px;
-  }
 `
