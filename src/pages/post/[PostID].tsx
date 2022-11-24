@@ -1,6 +1,8 @@
+/* eslint-disable react/no-children-prop */
 import { ParsedUrlQuery } from 'querystring'
 import { InferGetStaticPropsType } from 'next'
 import { GetStaticPaths, GetStaticProps } from "next"
+import ReactMarkdown from 'react-markdown'
 
 import Title from "../../components/Title"
 import AuthorPost from '../../components/AuthorPost'
@@ -22,8 +24,8 @@ const Post: React.FC = ({ content }: InferGetStaticPropsType<typeof getStaticPro
         </ul>
 
         <PostText>
-          <p>
-            {content.post_content}
+          <p dangerouslySetInnerHTML={{ __html: content.post_content }} >
+
           </p>
         </PostText>
 
