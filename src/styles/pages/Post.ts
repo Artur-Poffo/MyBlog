@@ -42,18 +42,42 @@ export const PostText = styled.div`
   max-width: 960px;
 
   div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text);
+
     h2 {
+      font-size: 2.25rem;
+      text-transform: capitalize;
       letter-spacing: .8px;
       margin: 30px 0;
+      align-self: flex-start;
+
+      @media (max-width: 520px) {
+        font-size: 1.75rem;
+      }
     }
 
     p {
-    color: var(--text);
-    letter-spacing: .5px;
-    line-height: 1.6;
-    font-size: 1.25rem;
-    margin-bottom: 30px;
-  }
+      letter-spacing: .5px;
+      line-height: 1.6;
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    iframe {
+      width: 100%;
+
+      @media (max-width: 520px) {
+        height: 220px;
+      }
+    }
   }
 
 `
