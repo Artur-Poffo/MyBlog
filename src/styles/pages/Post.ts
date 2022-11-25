@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Header = styled.div<IBg>`
   width: 100%;
-  height: 70vh;
+  height: 77vh;
   background-image: url(${props => props.image});
   background-repeat: no-repeat;
   background-position: center;
@@ -27,6 +27,7 @@ export const Content = styled.div`
   align-items: center;
 
   ul {
+    text-transform: lowercase;
     color: var(--secondary);
     letter-spacing: 3px;
     font-weight: bold;
@@ -70,6 +71,36 @@ export const PostText = styled.div`
       text-decoration: underline;
     }
 
+    code {
+      color: var(--secondary);
+      width: max-content;
+      padding: 7px;
+      display: inline;
+      font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+      border-radius: 5px;
+      background-color: var(--contrast);
+    }
+
+    pre {
+      align-self: center;
+      display: block;
+      width: 100%;
+      background-color: var(--contrast);
+      border-radius: 5px;
+      margin: 20px;
+
+      code {
+        display: block;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+        tab-size: 2;
+        hyphens: none;
+      }
+    }
+
     iframe {
       width: 100%;
 
@@ -78,5 +109,4 @@ export const PostText = styled.div`
       }
     }
   }
-
 `
