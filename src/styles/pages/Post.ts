@@ -87,7 +87,7 @@ export const PostText = styled.div`
       width: 100%;
       background-color: var(--contrast);
       border-radius: 5px;
-      margin: 20px;
+      margin: 20px 0;
 
       code {
         display: block;
