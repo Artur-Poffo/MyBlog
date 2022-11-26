@@ -1,16 +1,16 @@
 # MyBlog:
 
-> Status: Em Desenvolvimento...
+> Status: Version 1.0.0 🚀
 
-Tive uma ideia interessante de fazer um Blog de tecnologia com as coisas que andei aprendendo recentemente, ainda não sei se vou realmente escrever posts e tudo mais ou se será apenas mais um projeto de estudo, vai depender da minha vontade :)
+I had an interesting idea to make a technology blog with the things I've been learning recently, I still don't know if I'm really going to write posts and everything else or if it's just another study project, it will depend on my will :)
 
-## Tecnologias:
+## Techs:
 - React.js
-- Next.js (com SSG e ISR)
+- Next.js (with SSG and ISR)
 - styled-components
 - ESlint
-- MongoDB (armazena dados dos posts)
+- MongoDB (store post data)
 - Node.js
 - TypeScript
 
-**Blog com Next.js, Typescript e MongoDB**
+**Blog with Next.js, Typescript and MongoDB**
